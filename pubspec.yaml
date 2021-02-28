@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   flutter_svg: ^0.19.1
+  animations: ^1.1.0 #Help us to use animation easily also develop by flutter team
 
 dev_dependencies:
   flutter_test:

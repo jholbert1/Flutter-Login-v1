@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:animations/animations.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:loginsignup2/Screen/Details/components/details_screen.dart';
 import 'package:loginsignup2/constants.dart';
 import 'package:loginsignup2/models/movie.dart';
 
@@ -11,7 +13,17 @@ class MovieCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-      child: Column(
+      child: OpenContainer(
+        closedElevation: 0,
+        openElevation: 0,
+        closedBuilder: (context, action) => buildMovieCard(context),
+        openBuilder: (context, action) => DetailsScreen(movie: movie),
+      )
+    );
+  }
+
+  Column buildMovieCard(BuildContext context) {
+    return Column(
         children: <Widget>[
           Expanded(
             child: Container(
@@ -43,7 +55,6 @@ class MovieCard extends StatelessWidget {
             )
           ])
         ],
-      ),
-    );
+      );
   }
 }

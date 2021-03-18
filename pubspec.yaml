@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_svg: ^0.19.1
   animations: ^1.1.0 #Help us to use animation easily also develop by flutter team
+  flutter_riverpod: ^0.12.1
+  http: ^0.12.1
 
 dev_dependencies:
   flutter_test:
